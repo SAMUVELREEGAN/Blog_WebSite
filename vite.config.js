@@ -3,9 +3,10 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
   server: {
-    port: process.env.PORT || 5173, // Use the PORT from Render, default to 5173
-    host: '0.0.0.0' // Allow external access
+    port: process.env.PORT || 5173, // Use Render's PORT
+    host: '0.0.0.0', // Allow external access
+    strictPort: true,
+    allowedHosts: ['.onrender.com', 'localhost'] // Allow Render's domain and localhost
   }
-})
+});
