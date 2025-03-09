@@ -6,7 +6,7 @@
   "scripts": {
   "dev": "serve -s dist -l 3000",
   "build": "vite build",
-  "start": "cross-env PORT=3000 serve -s dist -l 3000",
+  "start": "serve -s dist -l 3000",  
   "lint": "eslint .",
   "preview": "vite preview"
 },
